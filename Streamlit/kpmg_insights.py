@@ -17,6 +17,7 @@ import matplotlib.style as style
 import requests
 from matplotlib.figure import Figure
 
+
 #sns.set_style('whitegrid')
 style.use('fivethirtyeight')
 plt.rcParams['lines.linewidth'] = 1

@@ -119,15 +119,15 @@ tra_cdg_df = pd.merge(tra_df, cdg_df, on='customer_id', how='inner')
 
 
 # profit VS job_industry_category & wealth_segment
-fig = px.box(tra_cdg_df, x="job_industry_category", y="profit", color="wealth_segment",
-            title="profit VS job_industry_category & wealth_segment")
+fig = px.histogram(tra_cdg_df, x="job_industry_category", y="profit", color="wealth_segment",title="profit VS job_industry_category & wealth_segment")
+
 st.plotly_chart(fig)
 st.markdown("\nhis graph shows profit and customer job categories with different wealth segment. By comparing the box plots for different job industry categories and wealth segment, we can make inferences about which job industries tend to be more profitable and which wealth segments tend to have higher profits.In this case, high net worth customer in Telecommunications category results to make more profit.")
 
 
 # Revenue VS job_industry_category & wealth_segment
-fig = px.box(tra_cdg_df, x="job_industry_category", y="list_price", color="wealth_segment",
-            title="Revenue VS job_industry_category & wealth_segment")
+fig = px.histogram(tra_cdg_df, x="job_industry_category", y="list_price", color="wealth_segment",title="Revenue VS job_industry_category & wealth_segment")
+
 st.plotly_chart(fig)
 st.markdown("\nThe above graph indicates the revenue (List Price) segment and customer wealth segment with different job category, purchasing the bikes with listed price. In this case Affluent customer tends to purchase more bikes followed by Mass customer in Financial services and Affluent customer in Agriculture job categories.")
 
